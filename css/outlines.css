@@ -1,0 +1,13 @@
+.photoLayer {
+  padding: 5px;
+  float: left;
+  width: 200px;
+}
+.asciiLayer {
+  padding: 5px;
+  width: 300px;
+  float: left;
+}
+.clear {
+  clear: left;
+}
