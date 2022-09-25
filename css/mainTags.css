@@ -1,0 +1,18 @@
+.header {
+    padding: 10px;
+    background-color: #4444dd;
+    margin: 0 0 0 0;
+    width: 100%;
+}
+
+.main {
+    padding: 10px;
+    background-color: rgb(24, 122, 222);
+    width: 100%;
+}
+
+.footer {
+    padding: 10px;
+    background-color: #4444dd;
+    width: 100%;
+}
