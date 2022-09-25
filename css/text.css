@@ -1,0 +1,59 @@
+.firstHeader {
+    font-size: 35px;
+    line-height: normal;
+    font-family: serif;
+    font-weight: normal;
+    text-align: left;
+    color: #000000;
+    text-indent: 0;
+    white-space: normal;
+    text-transform: none;
+}
+
+.listText {
+    font-size: 20px;
+    line-height: normal;
+    font-family: serif;
+    font-weight: normal;
+    text-align: left;
+    color: #000000;
+    text-indent: 0;
+    white-space: normal;
+    text-transform: none;
+}
+
+.quote {
+    font-size: 15px;
+    line-height: normal;
+    font-family: serif;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+    text-indent: 15px;
+    white-space: normal;
+    text-transform: none;
+}
+
+.link {
+    font-size: 15px;
+    line-height: normal;
+    font-family: serif;
+    font-weight: normal;
+    text-align: left;
+    color: #1CC5FA;
+    text-indent: 0;
+    white-space: normal;
+    text-transform: none;
+}
+
+.text {
+    font-size: 15px;
+    line-height: normal;
+    font-family: serif;
+    font-weight: normal;
+    text-align: left;
+    color: #000000;
+    text-indent: 0;
+    white-space: normal;
+    text-transform: none;
+}
