@@ -34,6 +34,18 @@ ul {
     text-transform: none;
 }
 
+ul li a{
+    font-size: 22px;
+    line-height: normal;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: normal;
+    text-align: left;
+    color: #34ff5e;
+    text-indent: 0;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
 
 .firstHeader {
     font-size: 35px;
