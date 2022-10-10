@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="c#, resume, резюме">
     <title>Обо мне</title>
-    <link href="css/outlines.css" rel="stylesheet">
+    <link href="css/mainTags.css" rel="stylesheet">
+    <link href="css/pictures.css" rel="stylesheet">
+    <link href="css/text.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <nav>
-        <a href="About.html">Обо мне</a>
+        <a href="index.html">Обо мне</a>
         <a href="Achievements.html">Достижения</a>
         <a href="Projects.html">Проекты</a>
         <a href="WorkExperience.html">Опыт работы</a>
     </nav>
 </header>
 <main>
-    <h1>Приветствую! Меня зовут Иван, я учусь на третьем курсе в университете ИТМО.</h1>
+    <h1 class="firstHeader">Приветствую! Меня зовут Иван, я учусь на третьем курсе в университете ИТМО.</h1>
     <div class="photoLayer">
         <img src="img/AboutPagePhoto.jpg" width="200" height="200" alt="моё фото">
     </div>
@@ -35,20 +38,20 @@
     </pre>
     </div>
     <div class="clear"></div>
-    <section>
+    <section class="quote">
         <q>Чем больше я знаю, тем больше я понимаю, что ничего не знаю </q> <cite>(c) Демокрит</cite> <br>
-        s = x + y<sup>n</sup>, где s - успех, x - талант, y - приложенные усилия, n => +∞
+        <div>s = x + y<sup>n</sup>, где s - успех, x - талант, y - приложенные усилия, n => +∞</div>
     </section>
 
     <section>
-        <h3>Skills</h3>
+        <h2 class="secondHeader">Skills</h2>
         <ul>
             <li><b>Языки:</b> C#, Kotlin, C++, C, Java, Python</li>
             <li><b>Фреймворки:</b> ASP.NET Core, Entity Framework, Quarkus, Hibernate, Panache</li>
             <li><b>Базы данных:</b> MySQL, PostgreSQL, SQL server</li>
             <li><b>Другие технологии:</b> Git, Docker, Linux, Bash, Latex, Postman, Swagger</li>
         </ul>
-        <code>
+        <code class="text">
             main = putStrLn "А ещё я интересуюсь функциональным программированием и в свободное время пишу OpenSource
             проекты"
             <br><br>

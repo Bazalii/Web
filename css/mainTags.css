@@ -1,0 +1,20 @@
+body {
+    background-color: #187ADEFF;
+    margin: 0 5px 0 5px;
+}
+
+body header {
+    background-color: #4444dd;
+    padding: 10px;
+    margin: 5px 0 0 0;
+}
+
+body main {
+    background-color: #187ADEFF;
+    width: 100%;
+}
+
+body footer {
+    background-color: #4444dd;
+    padding: 10px;
+}
