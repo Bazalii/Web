@@ -28,3 +28,7 @@ body footer {
     flex-direction: row;
     justify-content: flex-start;
 }
+
+.flex-container {
+    display: flex;
+}
