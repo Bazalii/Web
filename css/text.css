@@ -35,7 +35,7 @@ ul li a {
 }
 
 
-.firstHeader {
+h1 {
     font-size: 35px;
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: normal;
@@ -46,7 +46,7 @@ ul li a {
     text-transform: none;
 }
 
-.secondHeader {
+h2 {
     font-size: 25px;
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: bold;
