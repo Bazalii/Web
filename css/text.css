@@ -4,7 +4,6 @@ nav {
     text-align: left;
     color: #1CC5FA;
     text-indent: 0;
-    letter-spacing: 1px;
     margin: 5px;
 }
 
@@ -14,8 +13,10 @@ a {
     text-align: left;
     color: #1CC5FA;
     text-indent: 0;
-    letter-spacing: 1px;
     margin: 5px;
+    padding: 10px;
+    background-color: #1304a1;
+    border-radius: 10px;
 }
 
 ul {
@@ -34,6 +35,8 @@ ul li a {
     color: #34ff5e;
     text-indent: 0;
     letter-spacing: 0;
+    padding: 0 0 0 0;
+    background: none;
 }
 
 
@@ -43,7 +46,7 @@ h1 {
     font-weight: normal;
     text-align: left;
     color: #000000;
-    text-indent: 0;
+    text-indent: 10px;
     letter-spacing: 0;
     text-transform: none;
 }

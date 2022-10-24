@@ -13,6 +13,7 @@ body header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    border-radius: 15px;
 }
 
 body main {
@@ -27,6 +28,7 @@ body footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    border-radius: 15px;
 }
 
 .flex-container {
