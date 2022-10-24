@@ -5,6 +5,8 @@ nav {
     color: #1CC5FA;
     text-indent: 0;
     margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 a {
