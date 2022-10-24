@@ -1,20 +1,30 @@
 body {
     background-color: #187ADEFF;
     margin: 0 5px 0 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body header {
     background-color: #4444dd;
     padding: 10px;
     margin: 5px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 body main {
     background-color: #187ADEFF;
     width: 100%;
+    flex: 1;
 }
 
 body footer {
     background-color: #4444dd;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
