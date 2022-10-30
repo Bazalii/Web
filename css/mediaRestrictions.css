@@ -117,4 +117,8 @@
         letter-spacing: 0;
         text-transform: none;
     }
+
+    .photoLayer {
+        display: none;
+    }
 }

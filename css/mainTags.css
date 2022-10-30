@@ -13,6 +13,10 @@ body header {
     flex-direction: row;
     justify-content: flex-start;
     border-radius: 15px;
+    z-index: 2;
+    position: sticky;
+    left: 0;
+    top: 0;
 }
 
 body main {
