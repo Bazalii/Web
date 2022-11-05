@@ -9,7 +9,7 @@ function calculateLoadingTime() {
 }
 
 function showLoadingTime() {
-    let element = document.getElementById("loadingInformation");
+    let element = document.getElementById('loadInformation');
     let text = document.createTextNode(calculateLoadingTime());
 
     element.appendChild(text);
