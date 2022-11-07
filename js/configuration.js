@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded',
     event => setMouseOutHandlers('body footer nav a'));
 
 document.addEventListener('DOMContentLoaded',
-    event => handleLocationChange(document.location.pathname, '#1CC5FA', '#000000'));
+    event => handleLocationChange(document.location.href, '#1CC5FA', '#000000'));
 
 window.addEventListener('load', event => showLoadingTime());
