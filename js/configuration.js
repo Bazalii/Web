@@ -11,6 +11,4 @@ document.addEventListener('DOMContentLoaded',
 document.addEventListener('DOMContentLoaded',
     event => handleLocationChange(document.location.pathname, '#1CC5FA', '#000000'));
 
-document.addEventListener('DOMContentLoaded', event => startLoadingTimeMeasurement());
-
 window.addEventListener('load', event => showLoadingTime());
