@@ -1,11 +1,11 @@
-let loadingTime = 0
+let loadingTime = 0;
 
 function startLoadingTimeMeasurement() {
-    loadingTime = Date.now()
+    loadingTime = Date.now();
 }
 
 function calculateLoadingTime() {
-    return (Date.now() - loadingTime) / 1000 + ' seconds'
+    return (Date.now() - loadingTime) / 1000 + ' seconds';
 }
 
 function showLoadingTime() {
