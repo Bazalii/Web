@@ -21,6 +21,17 @@ a {
     border-radius: 10px;
 }
 
+.loadInformation {
+    font-size: 15px;
+    font-family: "Roboto", "Arial", sans-serif;
+    text-align: left;
+    color: #1CC5FA;
+    text-indent: 0;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 ul {
     font-size: 20px;
     font-family: "Roboto", "Arial", sans-serif;
