@@ -29,10 +29,16 @@
     </nav>
 </header>
 <main>
-    <form id="tableInput" action="">
-        <input type="text" placeholder="Количество колонок" id="columns">
+    <form id="tableSizing" action="">
+        <input type="text" placeholder="Количество столбцов" id="columns">
         <input type="text" placeholder="Количество строк" id="rows">
-        <input id="inputButton" type="button" value="Send">
+        <input id="tableSizingButton" type="button" value="Send">
+    </form>
+    <form id="tableInput" action="">
+        <input type="text" placeholder="Столбец" id="column">
+        <input type="text" placeholder="Строка" id="row">
+        <input type="text" placeholder="Значение" id="tableCellContent">
+        <input id="tableInputButton" type="button" value="Send">
     </form>
     <div id="customTable"></div>
 </main>
