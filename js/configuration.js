@@ -11,4 +11,6 @@ document.addEventListener('DOMContentLoaded',
 document.addEventListener('DOMContentLoaded',
     event => handleLocationChange(document.location.href, '#1CC5FA', '#000000'));
 
+document.addEventListener('DOMContentLoaded', event => setOnClickHandlers())
+
 window.addEventListener('load', event => showLoadingTime());
