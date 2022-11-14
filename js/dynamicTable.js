@@ -1,7 +1,9 @@
 function setOnClickHandlers() {
-    let inputButton = document.getElementById('inputButton');
+    let tableSizingButton = document.getElementById('tableSizingButton');
+    let tableInputButton = document.getElementById('tableInputButton');
 
-    inputButton.addEventListener('click', event => createTable())
+    tableSizingButton.addEventListener('click', event => createTable())
+    tableInputButton.addEventListener('click', event => addContentToCell())
 }
 
 function createTable() {
@@ -35,4 +37,20 @@ function createTable() {
     table.style.setProperty('grid-template-columns', gridTemplateColumns);
 
     parent.appendChild(table);
+}
+
+function addContentToCell() {
+    let table = document.getElementsByTagName('table')[0];
+
+    let column = document.getElementById('column');
+    let row = document.getElementById('row');
+    let tableCellContent = document.getElementById('tableCellContent').value;
+
+    let columnNumber = Number(column.value);
+    let rowNumber = Number(row.value);
+
+    let cell = table.rows[rowNumber - 1].cells[columnNumber - 1];
+
+    cell.innerHTML = tableCellContent;
+    cell.style.textAlign = 'center';
 }
