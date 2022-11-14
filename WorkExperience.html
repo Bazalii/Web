@@ -17,6 +17,7 @@
     <script src="js/pageLoading.js"></script>
     <script src="js/interactiveMenu.js"></script>
     <script src="js/navigationLocation.js"></script>
+    <script src="js/dynamicTable.js"></script>
 </head>
 <body>
 <header>
@@ -28,36 +29,18 @@
     </nav>
 </header>
 <main>
-    <table>
-        <thead>
-        <tr>
-            <th>Название</th>
-            <th>Занимаемая должность</th>
-            <th>Начало работы</th>
-            <th>Окончание работы</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Great</td>
-            <td>Разнорабочий</td>
-            <td>июнь 2018</td>
-            <td>август 2018</td>
-        </tr>
-        <tr>
-            <td>Mapins</td>
-            <td>Backend-teamlead</td>
-            <td>сентябрь 2022</td>
-            <td>настоящее время</td>
-        </tr>
-        </tbody>
-    </table>
+    <form id="tableInput" action="">
+        <input type="text" placeholder="Количество колонок" id="columns">
+        <input type="text" placeholder="Количество строк" id="rows">
+        <input id="inputButton" type="button" value="Send">
+    </form>
+    <div id="customTable"></div>
 </main>
 <footer>
     <nav>
         <a href="https://github.com/Bazalii" target="_blank">Github</a>
         <a href="https://t.me/IvanBazalii" target="_blank">Telegram</a>
-        <div class="loadInformation" id="loadInformation">Время загрузки страницы: </div>
+        <div class="loadInformation" id="loadInformation">Время загрузки страницы:</div>
     </nav>
 </footer>
 </body>
