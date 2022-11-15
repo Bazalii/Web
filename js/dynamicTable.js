@@ -5,21 +5,30 @@ function setOnClickHandlers() {
     let saveTableButton = document.getElementById('saveTable');
     let clearLocalStorageButton = document.getElementById('clearLocalStorage');
 
-    tableSizingButton.addEventListener('click', event => createTable());
-    tableInputButton.addEventListener('click', event => addContentToCell());
-    loadTableButton.addEventListener('click', event => loadTable());
+    tableSizingButton.addEventListener('click', event =>
+        createTable(
+            document.getElementById('customTable'),
+            document.getElementById('columns').value,
+            document.getElementById('rows').value
+        ));
+    tableInputButton.addEventListener('click', event =>
+        addContentToCell(
+            document.getElementsByTagName('table')[0],
+            document.getElementById('column').value - 1,
+            document.getElementById('row').value - 1,
+            document.getElementById('tableCellContent').value
+        ));
+    loadTableButton.addEventListener('click', event =>
+        loadTable(
+            document.getElementById('customTable'),
+            Number(localStorage.getItem('tableColumnsNumber')),
+            Number(localStorage.getItem('tableRowsNumber'))
+        ));
     saveTableButton.addEventListener('click', event => saveTable());
     clearLocalStorageButton.addEventListener('click', event => clearLocalStorage());
 }
 
-function createTable() {
-    let parent = document.getElementById('customTable');
-    let columns = document.getElementById('columns').value;
-    let rows = document.getElementById('rows').value;
-
-    let columnsNumber = Number(columns);
-    let rowsNumber = Number(rows);
-
+function createTable(parent, columnsNumber, rowsNumber) {
     let table = document.createElement('table');
 
     for (let i = 0; i < rowsNumber; i++) {
@@ -34,68 +43,27 @@ function createTable() {
         table.appendChild(tr);
     }
 
-    let gridTemplateColumns = '';
-
-    for (let i = 0; i < columnsNumber; i++) {
-        gridTemplateColumns += 'minmax(100px, 250px)';
-    }
+    let gridTemplateColumns = 'minmax(100px, 250px)'.repeat(columnsNumber);
 
     table.style.setProperty('grid-template-columns', gridTemplateColumns);
 
     parent.appendChild(table);
 
-    localStorage.setItem('tableColumnsNumber', columns);
-    localStorage.setItem('tableRowsNumber', rows);
+    return table;
 }
 
-function addContentToCell() {
-    let table = document.getElementsByTagName('table')[0];
+function addContentToCell(table, columnNumber, rowNumber, content) {
+    let cell = table.rows[rowNumber].cells[columnNumber];
 
-    let column = document.getElementById('column');
-    let row = document.getElementById('row');
-    let tableCellContent = document.getElementById('tableCellContent').value;
-
-    let columnNumber = Number(column.value);
-    let rowNumber = Number(row.value);
-
-    let cell = table.rows[rowNumber - 1].cells[columnNumber - 1];
-
-    cell.innerHTML = tableCellContent;
-    cell.style.textAlign = 'center';
+    cell.innerHTML = content;
 }
 
-function loadTable() {
-    let parent = document.getElementById('customTable');
-    let columnsNumber = localStorage.getItem('tableColumnsNumber');
-    let rowsNumber = localStorage.getItem('tableRowsNumber');
-
+function loadTable(parent, columnsNumber, rowsNumber) {
     let tableInfo = JSON.parse(localStorage.getItem('tableInfo'));
 
-    let table = document.createElement('table');
+    let table = createTable(parent, columnsNumber, rowsNumber);
 
-    for (let i = 0; i < rowsNumber; i++) {
-        let tr = document.createElement('tr');
-
-        for (let j = 0; j < columnsNumber; j++) {
-            let td = document.createElement('td');
-
-            td.innerHTML = tableInfo.find(element => element.column === j && element.row === i).content;
-
-            tr.appendChild(td);
-        }
-
-        table.appendChild(tr);
-    }
-
-    let gridTemplateColumns = '';
-
-    for (let i = 0; i < columnsNumber; i++) {
-        gridTemplateColumns += 'minmax(100px, 250px)';
-    }
-
-    table.style.setProperty('grid-template-columns', gridTemplateColumns);
-
-    parent.appendChild(table);
+    tableInfo.forEach(cell => addContentToCell(table, cell.column, cell.row, cell.content));
 }
 
 function saveTable() {
@@ -106,17 +74,21 @@ function saveTable() {
         for (let columnNumber = 0; columnNumber < table.rows[rowNumber].cells.length; columnNumber++) {
             let tableCellContent = table.rows[rowNumber].cells[columnNumber].innerHTML;
 
-            let cellInformation = {
-                column : columnNumber,
-                row : rowNumber,
-                content : tableCellContent
-            };
+            if (tableCellContent.length !== 0) {
+                let cellInformation = {
+                    column: columnNumber,
+                    row: rowNumber,
+                    content: tableCellContent
+                };
 
-            tableInfo.push(cellInformation);
+                tableInfo.push(cellInformation);
+            }
         }
     }
 
     localStorage.setItem('tableInfo', JSON.stringify(tableInfo));
+    localStorage.setItem('tableColumnsNumber', table.rows[0].cells.length.toString());
+    localStorage.setItem('tableRowsNumber', table.rows.length.toString());
 }
 
 function clearLocalStorage() {
