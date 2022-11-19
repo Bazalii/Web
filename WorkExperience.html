@@ -35,16 +35,16 @@
     <button id="loadTable">LoadTable</button>
     <button id="saveTable">SaveTable</button>
     <button id="clearLocalStorage">ClearLocalStorage</button>
-    <form id="tableSizing" action="">
+    <form id="tableSizing" action="" onsubmit="return false">
         <input type="number" placeholder="Количество столбцов" id="columns">
         <input type="number" placeholder="Количество строк" id="rows">
-        <input id="tableSizingButton" type="button" value="Send">
+        <input id="tableSizingButton" type="submit" value="Send">
     </form>
-    <form id="tableInput" action="">
+    <form id="tableInput" action="" onsubmit="return false">
         <input type="number" placeholder="Столбец" id="column">
         <input type="number" placeholder="Строка" id="row">
         <input type="text" placeholder="Значение" id="tableCellContent">
-        <input id="tableInputButton" type="button" value="Send">
+        <input id="tableInputButton" type="submit" value="Send">
     </form>
     <div id="customTable"></div>
 </main>
