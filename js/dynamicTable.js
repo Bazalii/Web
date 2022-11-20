@@ -24,14 +24,6 @@ function setOnClickHandlers() {
         }
     );
 
-    loadTableButton.addEventListener('click', event =>
-        loadTable(
-            document.getElementById('customTable'),
-            Number(localStorage.getItem('tableColumnsNumber')),
-            Number(localStorage.getItem('tableRowsNumber'))
-        ));
-
-    saveTableButton.addEventListener('click', event => saveTable());
     clearLocalStorageButton.addEventListener('click', event => clearLocalStorage());
 }
 
