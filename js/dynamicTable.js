@@ -11,19 +11,26 @@ function setOnClickHandlers() {
             document.getElementById('columns').value,
             document.getElementById('rows').value
         ));
-    tableInputButton.addEventListener('click', event =>
-        addContentToCell(
-            document.getElementsByTagName('table')[0],
-            document.getElementById('column').value - 1,
-            document.getElementById('row').value - 1,
-            document.getElementById('tableCellContent').value
-        ));
+
+    tableInputButton.addEventListener('click', event => {
+            addContentToCell(
+                document.getElementsByTagName('table')[0],
+                document.getElementById('column').value - 1,
+                document.getElementById('row').value - 1,
+                document.getElementById('tableCellContent').value
+            );
+
+            saveTable();
+        }
+    );
+
     loadTableButton.addEventListener('click', event =>
         loadTable(
             document.getElementById('customTable'),
             Number(localStorage.getItem('tableColumnsNumber')),
             Number(localStorage.getItem('tableRowsNumber'))
         ));
+
     saveTableButton.addEventListener('click', event => saveTable());
     clearLocalStorageButton.addEventListener('click', event => clearLocalStorage());
 }
@@ -60,6 +67,8 @@ function addContentToCell(table, columnNumber, rowNumber, content) {
 
 function loadTable(parent, columnsNumber, rowsNumber) {
     let tableInfo = JSON.parse(localStorage.getItem('tableInfo'));
+
+    if (columnsNumber === 0 || rowsNumber === 0) return;
 
     let table = createTable(parent, columnsNumber, rowsNumber);
 
