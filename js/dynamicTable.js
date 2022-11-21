@@ -1,8 +1,6 @@
 function setOnClickHandlers() {
     let tableSizingButton = document.getElementById('tableSizingButton');
     let tableInputButton = document.getElementById('tableInputButton');
-    let loadTableButton = document.getElementById('loadTable');
-    let saveTableButton = document.getElementById('saveTable');
     let clearLocalStorageButton = document.getElementById('clearLocalStorage');
 
     tableSizingButton.addEventListener('click', event =>
@@ -42,7 +40,7 @@ function createTable(parent, columnsNumber, rowsNumber) {
         table.appendChild(tr);
     }
 
-    let gridTemplateColumns = 'minmax(100px, 250px)'.repeat(columnsNumber);
+    let gridTemplateColumns = `repeat(${columnsNumber}, minmax(100px, 250px))`;
 
     table.style.setProperty('grid-template-columns', gridTemplateColumns);
 
