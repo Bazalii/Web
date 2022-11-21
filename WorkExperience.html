@@ -33,15 +33,15 @@
 </header>
 <main>
     <button id="clearLocalStorage">ClearLocalStorage</button>
-    <form id="tableSizing" action="" onsubmit="return false">
-        <input type="number" placeholder="Количество столбцов" id="columns">
-        <input type="number" placeholder="Количество строк" id="rows">
+    <form id="tableSizing" action="">
+        <input type="number" required="required" min="1" step="1" placeholder="Количество столбцов" id="columns">
+        <input type="number" required="required" min="1" step="1" placeholder="Количество строк" id="rows">
         <input id="tableSizingButton" type="submit" value="Send">
     </form>
-    <form id="tableInput" action="" onsubmit="return false">
-        <input type="number" placeholder="Столбец" id="column">
-        <input type="number" placeholder="Строка" id="row">
-        <input type="text" placeholder="Значение" id="tableCellContent">
+    <form id="tableInput" action="">
+        <input type="number" required="required" min="1" step="1" placeholder="Столбец" id="column">
+        <input type="number" required="required" min="1" step="1" placeholder="Строка" id="row">
+        <input type="text" required="required" placeholder="Значение" id="tableCellContent">
         <input id="tableInputButton" type="submit" value="Send">
     </form>
     <div id="customTable"></div>
