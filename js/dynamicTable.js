@@ -1,3 +1,15 @@
+function setOnSubmitHandlers() {
+    let tableSizingForm = document.getElementById('tableSizing');
+    let tableInputForm = document.getElementById('tableInput');
+
+    tableSizingForm.addEventListener('submit', event => removeDefaultEventHandler(event));
+    tableInputForm.addEventListener('submit', event => removeDefaultEventHandler(event));
+}
+
+function removeDefaultEventHandler(event) {
+    event.preventDefault();
+}
+
 function setOnClickHandlers() {
     let tableSizingButton = document.getElementById('tableSizingButton');
     let tableInputButton = document.getElementById('tableInputButton');
