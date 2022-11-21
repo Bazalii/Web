@@ -4,13 +4,13 @@ table {
     border: 5px solid #222222;
     flex: 1;
     display: grid;
-    grid-template-columns: minmax(50px, 150px) minmax(100px, 250px) minmax(100px, 200px) minmax(100px, 200px);
 }
 
 thead,
 tbody,
 tr {
     display: contents;
+    text-align: center;
 }
 
 th,

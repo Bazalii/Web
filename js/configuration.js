@@ -11,4 +11,14 @@ document.addEventListener('DOMContentLoaded',
 document.addEventListener('DOMContentLoaded',
     event => handleLocationChange(document.location.href, '#1CC5FA', '#000000'));
 
+document.addEventListener('DOMContentLoaded', event =>
+    loadTable(
+        document.getElementById('customTable'),
+        Number(localStorage.getItem('tableColumnsNumber')),
+        Number(localStorage.getItem('tableRowsNumber'))
+    ));
+
+document.addEventListener('DOMContentLoaded', event => setOnClickHandlers())
+document.addEventListener('DOMContentLoaded', event => setOnSubmitHandlers())
+
 window.addEventListener('load', event => showLoadingTime());
