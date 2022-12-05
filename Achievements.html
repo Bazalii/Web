@@ -10,12 +10,16 @@
     <link href="css/pictures.css" rel="stylesheet">
     <link href="css/text.css" rel="stylesheet">
     <link href="css/mediaRestrictions.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/reviews.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <script src="js/configuration.js"></script>
     <script src="js/pageLoading.js"></script>
     <script src="js/interactiveMenu.js"></script>
     <script src="js/navigationLocation.js"></script>
+    <script src="js/workReviews.js"></script>
 </head>
 <body>
 <header>
@@ -27,15 +31,9 @@
     </nav>
 </header>
 <main>
-    <section>
-        <h1>Достижения</h1>
-        <ul>
-            <li>Призёр открытой олимпиады школьников ИТМО по информатике</li>
-            <li>Призёр олимпиады НТИ по профилю передовые производственные технологии в составе команды</li>
-            <li>Призёр олимпиады Гранит Науки по профилю естественные науки</li>
-            <li>Прошёл курс от Тинькоффа по .Net разработке с баллом 92/95</li>
-        </ul>
-    </section>
+    <button id="getReviewsButton" type="button">Load work reviews</button>
+    <div id="loading"></div>
+    <div id="reviews" class="reviews"></div>
 </main>
 <footer>
     <nav>
