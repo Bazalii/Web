@@ -10,7 +10,7 @@ function removeDefaultEventHandler(event) {
     event.preventDefault();
 }
 
-function setOnClickHandlers() {
+function setTableFormsOnClickHandlers() {
     let tableSizingButton = document.getElementById('tableSizingButton');
     let tableInputButton = document.getElementById('tableInputButton');
     let clearLocalStorageButton = document.getElementById('clearLocalStorage');
