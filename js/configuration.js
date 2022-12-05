@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', event =>
         Number(localStorage.getItem('tableRowsNumber'))
     ));
 
-document.addEventListener('DOMContentLoaded', event => setOnClickHandlers())
+document.addEventListener('DOMContentLoaded', event => setTableFormsOnClickHandlers())
+document.addEventListener('DOMContentLoaded', event => setReviewsButtonOnClickHandler())
 document.addEventListener('DOMContentLoaded', event => setOnSubmitHandlers())
 
 window.addEventListener('load', event => showLoadingTime());
