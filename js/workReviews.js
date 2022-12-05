@@ -2,26 +2,26 @@ async function loadReviews() {
     clearReviewsSection()
 
     let loadingSection = document.getElementById('loading');
+    let reviews = document.getElementById('reviews');
+    let randomNumber = getRandomInt(100);
+    let response;
+    let comments;
 
     loadingSection.innerHTML += `
             <div class="loading"></div>
         `;
 
-    let randomNumber = getRandomInt(100);
-
-    let response = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomNumber}/comments`);
-    let comments = await response.json();
+    try {
+        response = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomNumber}/comments`);
+        comments = await response.json();
+    } catch (error) {
+        showError(reviews);
+    }
 
     loadingSection.innerHTML = ''
 
-    let reviews = document.getElementById('reviews');
-
-    if (response.status > 400 || comments.length === 0) {
-        reviews.innerHTML += `
-            <div class="reviewItem">
-                ⚠ Что-то пошло не так
-            </div>
-        `;
+    if (response.status >= 400 || comments.length === 0) {
+        showError(reviews);
 
         throw new Error('Что-то пошло не так!');
     }
@@ -57,4 +57,12 @@ function clearReviewsSection() {
     let reviews = document.getElementById('reviews');
 
     reviews.innerHTML = ''
+}
+
+function showError(reviews) {
+    reviews.innerHTML += `
+            <div class="reviewItem">
+                ⚠ Что-то пошло не так
+            </div>
+        `;
 }
