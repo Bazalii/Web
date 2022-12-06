@@ -27,13 +27,16 @@ async function loadReviews() {
     }
 
     comments.forEach(comment => {
-        reviews.innerHTML += `
-            <div class="reviewItem">
-                <strong>${comment.name}</strong>
-                <br><br>
-                ${comment.body}
-            </div>
-        `;
+        let reviewItem = document.querySelector('#reviewItem');
+        let clone = reviewItem.content.cloneNode(true);
+
+        let name = clone.querySelector('div strong');
+        let text = clone.querySelector('div div');
+
+        name.innerHTML = comment.name;
+        text.innerHTML = comment.body;
+
+        reviews.appendChild(clone);
     })
 }
 
