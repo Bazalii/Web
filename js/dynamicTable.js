@@ -10,7 +10,7 @@ function removeDefaultEventHandler(event) {
     event.preventDefault();
 }
 
-function setOnClickHandlers() {
+function setTableFormsOnClickHandlers() {
     let tableSizingButton = document.getElementById('tableSizingButton');
     let tableInputButton = document.getElementById('tableInputButton');
     let clearLocalStorageButton = document.getElementById('clearLocalStorage');
@@ -38,6 +38,14 @@ function setOnClickHandlers() {
 }
 
 function createTable(parent, columnsNumber, rowsNumber) {
+    if (columnsNumber < 1) {
+        throw new Error('Columns number cannot be less than 1!');
+    }
+
+    if (rowsNumber < 1) {
+        throw new Error('Rows number cannot be less than 1!');
+    }
+
     let table = document.createElement('table');
 
     for (let i = 0; i < rowsNumber; i++) {

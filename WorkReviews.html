@@ -4,42 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Проекты</title>
+    <title>Отзывы</title>
 
     <link href="css/mainTags.css" rel="stylesheet">
     <link href="css/pictures.css" rel="stylesheet">
     <link href="css/text.css" rel="stylesheet">
     <link href="css/mediaRestrictions.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/reviews.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <script src="js/configuration.js"></script>
     <script src="js/pageLoading.js"></script>
     <script src="js/interactiveMenu.js"></script>
     <script src="js/navigationLocation.js"></script>
+    <script src="js/workReviews.js"></script>
 </head>
 <body>
 <header>
     <nav>
         <a href="index.html">Обо мне</a>
-        <a href="Achievements.html">Достижения</a>
-        <a href="Projects.html">Проекты</a>
+        <a href="WorkReviews.html">Отзывы</a>
+        <a href="ProjectsAndAchievements.html">Проекты</a>
         <a href="WorkExperience.html">Опыт работы</a>
     </nav>
 </header>
 <main>
-    <section>
-        <h1>Проекты</h1>
-        <ul>
-            <li><a href="https://github.com/Bazalii/C-labs" target="_blank">C labs</a></li>
-            <li><a href="https://github.com/Bazalii/Cpp-labs" target="_blank">Cpp labs</a></li>
-            <li><a href="https://github.com/Bazalii/Algorithms" target="_blank">Algorithms labs</a></li>
-            <li><a href="https://github.com/Bazalii/OOP-labs" target="_blank">OOP labs</a></li>
-            <li><a href="https://github.com/Bazalii/Java-labs" target="_blank">Java labs</a></li>
-            <li><a href="https://github.com/Bazalii/Student_Life_Simulator" target="_blank">Student life simulator</a>
-            </li>
-            <li><a href="https://github.com/Bazalii/Tinkoff-Fintech" target="_blank">MiniBank</a></li>
-        </ul>
-    </section>
+    <button id="getReviewsButton" type="button">Load work reviews</button>
+    <div id="loading"></div>
+    <div id="reviews" class="reviews"></div>
+    <template id="reviewItem">
+        <div class="reviewItem">
+            <strong></strong>
+            <br><br>
+            <div></div>
+        </div>
+    </template>
 </main>
 <footer>
     <nav>
